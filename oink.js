@@ -3,5 +3,6 @@
     window.Oink = {}
     //global webgl context
     let canvas = document.createElement('canvas')
-    window.Oink.gl = canvas.getContext('webgl')
+    document.getElementsByTagName('body')[0].append(canvas)
+    window.Oink.gl = canvas.getContext('webgl', {preserveDrawingBuffer: true})
 })()
